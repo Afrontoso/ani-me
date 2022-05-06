@@ -5,3 +5,6 @@ Esse é o meu projeto de um clone do netflix para o bootcamp Carrefour Web Devel
 
 ## Home
 ![Home page](/img/tela.png)
+
+## Link do projeto
+https://afrontoso.github.io/ani-me/
