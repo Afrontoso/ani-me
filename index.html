@@ -4,93 +4,235 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css"> <!--linka com o arquivo css-->
 
-    <!-- resposividade -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/responsive.css">
-
-    <!-- owl css -->
     <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
 
-    <title>NETFLIX CLONE</title>
+    <title>ANI-ME — Streaming de Anime</title>
 </head>
 <body>
-    <header> <!--(cabeçalho) grupo de suporte introdutório-->
-        <div class="container" id="home"> <!-- class WRAPPER -->
-            <h2 class="logo"><a href="#" class="color_txt">ANI-ME</a></h2>
-            <nav> <!--Uma seção de uma pagina que aponta para outras páginas-->
-                <a href="#">Início</a>
-                <a href="#animes">Animes</a>
-                <a href="#recomendados">Recomendados</a>
-                <a href="#mais-assistidos">Mais Assistidos</a>
+    <div class="grain"></div>
+
+    <header id="site-header">
+        <div class="nav-container">
+            <a href="#home" class="logo-link">
+                <h1 class="logo">ANI-ME</h1>
+                <span class="logo-jp">アニメ</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="#home" class="nav-link" data-nav>Início</a>
+                <a href="#animes" class="nav-link" data-nav>Animes</a>
+                <a href="#recomendados" class="nav-link" data-nav>Recomendados</a>
+                <a href="#mais-assistidos" class="nav-link" data-nav>Mais Assistidos</a>
             </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="searchToggle" aria-label="Buscar">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                </button>
+                <button class="icon-btn" id="listToggle" aria-label="Minha Lista">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                    <span class="list-count" id="listCount">0</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="search-panel" id="searchPanel" hidden>
+            <input type="search" id="searchInput" placeholder="Procurar anime, gênero, ano...">
+            <button class="search-close" id="searchClose" aria-label="Fechar">✕</button>
         </div>
     </header>
 
-    <main> <!-- corpo do filme principal -->
-        <div class="filme-principal">
-            <div class="container"> <!-- class WRAPPER -->
-                <h3 class="titulo">One Piece</h3>
-                <p class="descricao">Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger.Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!</p>
-                <div class="botoes">
-                    <button role="button" class="botao"> <!--"role" identifica a função do botão-->
-                        <i class="fa-solid fa-play"></i> <!-- icon de play -->
-                        ASSISTIR AGORA
-                    <button role="button" class="botao">
-                        <i class="fa-solid fa-circle-info"></i> <!-- icon de info -->
-                        MAIS INORMAÇÕES
+    <main id="home">
+        <section class="hero">
+            <div class="hero-bg" id="heroBg"></div>
+            <div class="hero-gradient"></div>
+
+            <div class="hero-jp" aria-hidden="true">主要</div>
+
+            <div class="hero-inner">
+                <div class="hero-index">
+                    <span class="hero-num" id="heroNum">01</span>
+                    <span class="hero-divider"></span>
+                    <span class="hero-total" id="heroTotal">/ 05</span>
+                </div>
+
+                <div class="hero-meta">
+                    <span class="tag" id="heroGenre">Ação · Aventura</span>
+                    <span class="dot">●</span>
+                    <span class="meta-item" id="heroYear">1999</span>
+                    <span class="dot">●</span>
+                    <span class="meta-item" id="heroEps">1000+ eps</span>
+                </div>
+
+                <h2 class="hero-title" id="heroTitle">One Piece</h2>
+                <p class="hero-subtitle" id="heroSubtitle">ワンピース</p>
+
+                <p class="hero-desc" id="heroDesc">Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. A revelação do maior tesouro — o One Piece — cobiçado por homens de todo o mundo, deu início à Grande Era dos Piratas.</p>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="heroPlayBtn">
+                        <span class="btn-icon">▶</span>
+                        <span>Assistir Agora</span>
+                    </button>
+                    <button class="btn btn-ghost" id="heroInfoBtn">
+                        <span class="btn-icon">ⓘ</span>
+                        <span>Mais Informações</span>
                     </button>
                 </div>
             </div>
-        </div>
+
+            <div class="hero-nav">
+                <button class="hero-arrow" id="heroPrev" aria-label="Anterior">←</button>
+                <div class="hero-dots" id="heroDots"></div>
+                <button class="hero-arrow" id="heroNext" aria-label="Próximo">→</button>
+            </div>
+
+            <div class="hero-side" aria-hidden="true">SCROLL · 下へ</div>
+        </section>
+
+        <section class="shelf" id="animes">
+            <header class="shelf-head">
+                <span class="shelf-num">01</span>
+                <div>
+                    <h3 class="shelf-title">Animes</h3>
+                    <p class="shelf-sub">アニメ · Catálogo principal</p>
+                </div>
+                <div class="shelf-nav">
+                    <button class="shelf-btn" data-carousel="row-animes" data-dir="prev" aria-label="Anterior">←</button>
+                    <button class="shelf-btn" data-carousel="row-animes" data-dir="next" aria-label="Próximo">→</button>
+                </div>
+            </header>
+            <div class="owl-carousel owl-theme shelf-row" data-row="row-animes"></div>
+        </section>
+
+        <section class="shelf" id="mais-assistidos">
+            <header class="shelf-head">
+                <span class="shelf-num">02</span>
+                <div>
+                    <h3 class="shelf-title">Mais Assistidos</h3>
+                    <p class="shelf-sub">人気 · Top da semana</p>
+                </div>
+                <div class="shelf-nav">
+                    <button class="shelf-btn" data-carousel="row-populares" data-dir="prev" aria-label="Anterior">←</button>
+                    <button class="shelf-btn" data-carousel="row-populares" data-dir="next" aria-label="Próximo">→</button>
+                </div>
+            </header>
+            <div class="owl-carousel owl-theme shelf-row" data-row="row-populares"></div>
+        </section>
+
+        <section class="shelf" id="recomendados">
+            <header class="shelf-head">
+                <span class="shelf-num">03</span>
+                <div>
+                    <h3 class="shelf-title">Recomendados</h3>
+                    <p class="shelf-sub">おすすめ · Selecionados para você</p>
+                </div>
+                <div class="shelf-nav">
+                    <button class="shelf-btn" data-carousel="row-recomendados" data-dir="prev" aria-label="Anterior">←</button>
+                    <button class="shelf-btn" data-carousel="row-recomendados" data-dir="next" aria-label="Próximo">→</button>
+                </div>
+            </header>
+            <div class="owl-carousel owl-theme shelf-row" data-row="row-recomendados"></div>
+        </section>
+
+        <section class="shelf" id="minha-lista" hidden>
+            <header class="shelf-head">
+                <span class="shelf-num">♡</span>
+                <div>
+                    <h3 class="shelf-title">Minha Lista</h3>
+                    <p class="shelf-sub">お気に入り · Seus favoritos</p>
+                </div>
+                <div class="shelf-nav">
+                    <button class="shelf-btn" id="closeList" aria-label="Fechar">✕</button>
+                </div>
+            </header>
+            <div class="grid-row" id="favRow"></div>
+            <p class="empty-state" id="favEmpty" hidden>Nenhum anime favoritado ainda. Toque no ♡ em qualquer card.</p>
+        </section>
+
+        <section class="search-results" id="searchResults" hidden>
+            <header class="shelf-head">
+                <span class="shelf-num">✦</span>
+                <div>
+                    <h3 class="shelf-title">Resultados</h3>
+                    <p class="shelf-sub" id="searchSummary">— resultados encontrados</p>
+                </div>
+            </header>
+            <div class="grid-row" id="searchRow"></div>
+            <p class="empty-state" id="searchEmpty" hidden>Nenhum título encontrado.</p>
+        </section>
     </main>
-    <div class="carrosel-animes">
-        <h4 id="animes">Animes</h4>
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img class="box-filme" src="img/mini0.2.jpg" alt="capa-naruto"></div>
-            <div class="item"><img class="box-filme" src="img/mini1.2.jpg" alt="capa-one-piece"></div>
-            <div class="item"><img class="box-filme" src="img/mini2.2.jpg" alt="capa-naruto-shippuden"></div>
-            <div class="item"><img class="box-filme" src="img/mini3.2.jpg" alt="capa-jujutsu-kaisen-"></div>
-            <div class="item"><img class="box-filme" src="img/mini4.2.jpg" alt="capa-dragon-ball"></div>
-            <div class="item"><img class="box-filme" src="img/mini5.2.jpg" alt="capa-dragon-ball-super"></div>
-            <div class="item"><img class="box-filme" src="img/mini6.2.jpg" alt="capa-bleach"></div>
-            <div class="item"><img class="box-filme" src="img/mini7.2.jpg" alt="capa-kimetsu-no-yaiba"></div>
-            <div class="item"><img class="box-filme" src="img/mini8.2.jpg" alt="capa-attack-on-titan"></div>
-            <div class="item"><img class="box-filme" src="img/mini9.2.jpg" alt="capa-death-note"></div>
-        </div>
-        <h4 id="mais-assistidos">Mais Assistidos</h4>
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img class="box-filme" src="img/mini0.jpg" alt="capa-darling-in-the-franxx"></div>
-            <div class="item"><img class="box-filme" src="img/mini1.jpg" alt="capa-soul-eater"></div>
-            <div class="item"><img class="box-filme" src="img/mini2.jpg" alt="capa-highscrool-of-the-dead"></div>
-            <div class="item"><img class="box-filme" src="img/mini3.jpg" alt="capa-nanatsu-no-taizai"></div>
-            <div class="item"><img class="box-filme" src="img/mini4.jpg" alt="capa-swold-art-online"></div>
-            <div class="item"><img class="box-filme" src="img/mini5.jpg" alt="capa-tate-no-yuusha-no-nariagari"></div>
-            <div class="item"><img class="box-filme" src="img/mini6.jpg" alt="capa-one-puch-man"></div>
-            <div class="item"><img class="box-filme" src="img/mini7.jpg" alt="capa-hunter-x-hunter"></div>
-            <div class="item"><img class="box-filme" src="img/mini8.jpg" alt="capa-inuyasha"></div>
-            <div class="item"><img class="box-filme" src="img/mini9.jpg" alt="capa-os-cavaleiros-do-zodiaco"></div>
-        </div>
-        <h4 id="recomendados">Recomendados</h4>
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img class="box-filme" src="img/mini0.1.jpg" alt="capa-darling-in-the-franxx"></div>
-            <div class="item"><img class="box-filme" src="img/mini1.1.jpg" alt="capa-soul-eater"></div>
-            <div class="item"><img class="box-filme" src="img/mini2.1.jpg" alt="capa-highscrool-of-the-dead"></div>
-            <div class="item"><img class="box-filme" src="img/mini3.1.jpg" alt="capa-nanatsu-no-taizai"></div>
-            <div class="item"><img class="box-filme" src="img/mini4.1.jpg" alt="capa-swold-art-online"></div>
-            <div class="item"><img class="box-filme" src="img/mini5.1.jpg" alt="capa-tate-no-yuusha-no-nariagari"></div>
-            <div class="item"><img class="box-filme" src="img/mini6.1.jpg" alt="capa-one-puch-man"></div>
-            <div class="item"><img class="box-filme" src="img/mini7.1.jpg" alt="capa-hunter-x-hunter"></div>
-            <div class="item"><img class="box-filme" src="img/mini8.1.jpg" alt="capa-inuyasha"></div>
-            <div class="item"><img class="box-filme" src="img/mini9.1.jpg" alt="capa-os-cavaleiros-do-zodiaco"></div>
+
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>ANI-ME × NEW SEASON 2026 × 新世紀 × STREAMING · ANYWHERE · ANYTIME × アニメ × オタク CULTURE ×&nbsp;</span>
+            <span>ANI-ME × NEW SEASON 2026 × 新世紀 × STREAMING · ANYWHERE · ANYTIME × アニメ × オタク CULTURE ×&nbsp;</span>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/8d980e15a4.js" crossorigin="anonymous"></script><!-- link para o icons -->
-    <!-- owl js -->
+
+    <footer class="site-foot">
+        <div class="foot-col">
+            <p class="foot-logo">ANI-ME</p>
+            <p class="foot-tag">Streaming dedicado a quem ama anime.</p>
+        </div>
+        <div class="foot-col">
+            <p class="foot-label">NAVEGAR</p>
+            <a href="#animes">Animes</a>
+            <a href="#mais-assistidos">Populares</a>
+            <a href="#recomendados">Recomendados</a>
+        </div>
+        <div class="foot-col">
+            <p class="foot-label">© 2026</p>
+            <p class="foot-fine">Projeto de estudo. Imagens pertencem aos respectivos estúdios.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal" hidden>
+        <div class="modal-backdrop" data-modal-close></div>
+        <article class="modal-card">
+            <button class="modal-close" data-modal-close aria-label="Fechar">✕</button>
+            <div class="modal-cover">
+                <img id="modalImg" alt="">
+                <div class="modal-cover-fade"></div>
+            </div>
+            <div class="modal-body">
+                <span class="modal-kicker" id="modalGenre">—</span>
+                <h3 class="modal-title" id="modalTitle">—</h3>
+                <p class="modal-jp" id="modalJp">—</p>
+                <div class="modal-meta">
+                    <span id="modalYear">—</span>
+                    <span class="dot">●</span>
+                    <span id="modalEps">—</span>
+                    <span class="dot">●</span>
+                    <span id="modalRating">—</span>
+                </div>
+                <p class="modal-desc" id="modalDesc">—</p>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="modalPlay">
+                        <span class="btn-icon">▶</span>
+                        <span>Assistir</span>
+                    </button>
+                    <button class="btn btn-ghost" id="modalFav">
+                        <span class="btn-icon">♡</span>
+                        <span>Minha Lista</span>
+                    </button>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="toast" id="toast" hidden></div>
+
     <script src="js/owl/jquery.min.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/owl/setup.js"></script>
-
 </body>
 </html>
