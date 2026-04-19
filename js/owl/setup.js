@@ -4,60 +4,60 @@ const CATALOG = {
     featured: [
         {
             id: 'op', title: 'One Piece', jp: 'ワンピース',
-            image: 'img/mini1.2.jpg',
+            image: 'img/mini1.jpg',
             year: 1999, episodes: '1100+ eps', genre: 'Ação · Aventura', rating: '9.1',
             synopsis: 'Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. A revelação do maior tesouro — o One Piece — cobiçado por homens de todo o mundo, deu início à Grande Era dos Piratas.'
         },
         {
-            id: 'aot', title: 'Attack on Titan', jp: '進撃の巨人',
-            image: 'img/mini8.2.jpg',
+            id: 'aot', title: 'Ataque dos Titãs', jp: '進撃の巨人',
+            image: 'img/mini8.jpg',
             year: 2013, episodes: '87 eps', genre: 'Ação · Drama', rating: '9.4',
             synopsis: 'A humanidade vive cercada por muralhas gigantescas que a protegem de titãs devoradores de homens. Quando um titã colossal rompe a muralha, Eren Yeager jura extinguir todos os titãs.'
         },
         {
             id: 'kny', title: 'Kimetsu no Yaiba', jp: '鬼滅の刃',
-            image: 'img/mini7.2.jpg',
+            image: 'img/mini7.jpg',
             year: 2019, episodes: '55+ eps', genre: 'Ação · Sobrenatural', rating: '9.0',
             synopsis: 'Após a família de Tanjiro ser massacrada por demônios e sua irmã transformada, ele jura se tornar um caçador de demônios para vingar os seus e restaurar a humanidade de Nezuko.'
         },
         {
             id: 'jjk', title: 'Jujutsu Kaisen', jp: '呪術廻戦',
-            image: 'img/mini3.2.jpg',
+            image: 'img/mini3.jpg',
             year: 2020, episodes: '47+ eps', genre: 'Ação · Sobrenatural', rating: '8.7',
             synopsis: 'Yuji Itadori é arrastado para o mundo oculto dos feiticeiros Jujutsu após engolir um artefato amaldiçoado contendo fragmentos de Sukuna, o Rei das Maldições.'
         },
         {
             id: 'dn', title: 'Death Note', jp: 'デスノート',
-            image: 'img/mini9.2.jpg',
+            image: 'img/mini9.jpg',
             year: 2006, episodes: '37 eps', genre: 'Suspense · Psicológico', rating: '9.0',
             synopsis: 'Light Yagami encontra um caderno sobrenatural capaz de matar qualquer um cujo nome seja escrito nele. Ele decide reformular o mundo — mas o detetive L está no seu encalço.'
         }
     ],
 
     animes: [
-        { id: 'nar', title: 'Naruto', jp: 'ナルト', image: 'img/mini0.2.jpg', year: 2002, episodes: '220 eps', genre: 'Ação · Aventura', rating: '8.4', synopsis: 'Naruto Uzumaki, um jovem ninja rejeitado pela vila, busca reconhecimento e sonha em se tornar Hokage, o líder mais forte da Vila da Folha.' },
-        { id: 'op', title: 'One Piece', jp: 'ワンピース', image: 'img/mini1.2.jpg', year: 1999, episodes: '1100+ eps', genre: 'Ação · Aventura', rating: '9.1', synopsis: 'Monkey D. Luffy zarpa em busca do maior tesouro do mundo, o One Piece, reunindo uma tripulação de piratas com sonhos impossíveis.' },
-        { id: 'nsh', title: 'Naruto Shippuden', jp: 'ナルト 疾風伝', image: 'img/mini2.2.jpg', year: 2007, episodes: '500 eps', genre: 'Ação · Aventura', rating: '8.7', synopsis: 'Após treinar por dois anos e meio, Naruto retorna para enfrentar a organização Akatsuki e proteger seus amigos.' },
-        { id: 'jjk', title: 'Jujutsu Kaisen', jp: '呪術廻戦', image: 'img/mini3.2.jpg', year: 2020, episodes: '47+ eps', genre: 'Ação · Sobrenatural', rating: '8.7', synopsis: 'Yuji Itadori engole um artefato amaldiçoado e se torna hospedeiro de uma entidade lendária. Agora ele treina como feiticeiro Jujutsu.' },
-        { id: 'db', title: 'Dragon Ball', jp: 'ドラゴンボール', image: 'img/mini4.2.jpg', year: 1986, episodes: '153 eps', genre: 'Ação · Aventura', rating: '8.5', synopsis: 'Goku parte em uma jornada para encontrar as sete Esferas do Dragão, enfrentando inimigos cada vez mais poderosos.' },
-        { id: 'dbs', title: 'Dragon Ball Super', jp: 'ドラゴンボール超', image: 'img/mini5.2.jpg', year: 2015, episodes: '131 eps', genre: 'Ação · Aventura', rating: '8.2', synopsis: 'Goku e Vegeta enfrentam ameaças de outros universos, dos Deuses da Destruição a um torneio multiversal.' },
-        { id: 'ble', title: 'Bleach', jp: 'ブリーチ', image: 'img/mini6.2.jpg', year: 2004, episodes: '366 eps', genre: 'Ação · Sobrenatural', rating: '8.6', synopsis: 'Ichigo Kurosaki, adolescente que vê fantasmas, ganha os poderes de um Shinigami e passa a proteger os vivos dos Hollows.' },
-        { id: 'kny', title: 'Kimetsu no Yaiba', jp: '鬼滅の刃', image: 'img/mini7.2.jpg', year: 2019, episodes: '55+ eps', genre: 'Ação · Sobrenatural', rating: '9.0', synopsis: 'Tanjiro Kamado se torna caçador de demônios para salvar sua irmã, transformada em demônio após um ataque brutal.' },
-        { id: 'aot', title: 'Attack on Titan', jp: '進撃の巨人', image: 'img/mini8.2.jpg', year: 2013, episodes: '87 eps', genre: 'Ação · Drama', rating: '9.4', synopsis: 'Eren Yeager jura exterminar os titãs após a queda da muralha. Mas a verdade por trás deles é mais sombria do que parece.' },
-        { id: 'dn', title: 'Death Note', jp: 'デスノート', image: 'img/mini9.2.jpg', year: 2006, episodes: '37 eps', genre: 'Suspense · Psicológico', rating: '9.0', synopsis: 'Light Yagami usa um caderno sobrenatural para matar criminosos. L, o maior detetive do mundo, investiga o caso.' }
+        { id: 'spy', title: 'Spy × Family', jp: 'スパイファミリー', image: 'img/mini0.2.jpg', year: 2022, episodes: '37+ eps', genre: 'Ação · Comédia', rating: '8.6', synopsis: 'O espião Twilight precisa formar uma família falsa para completar sua missão — mas sua esposa é uma assassina e a filha adotiva, uma telepata.' },
+        { id: 'baki', title: 'Baki Hanma', jp: '範馬刃牙', image: 'img/mini1.2.jpg', year: 2021, episodes: '26+ eps', genre: 'Ação · Luta', rating: '7.8', synopsis: 'Baki continua sua jornada para superar seu pai Yujiro, o ser mais forte do mundo, enfrentando lutadores lendários em batalhas brutais.' },
+        { id: 'tkr', title: 'Tokyo Revengers', jp: '東京卍リベンジャーズ', image: 'img/mini2.2.jpg', year: 2021, episodes: '50+ eps', genre: 'Ação · Sobrenatural', rating: '8.1', synopsis: 'Takemichi viaja no tempo 12 anos ao passado para salvar sua ex-namorada e impedir a ascensão de uma gangue criminosa.' },
+        { id: 'poke', title: 'Pokémon Jornadas', jp: 'ポケットモンスター', image: 'img/mini3.2.jpg', year: 1997, episodes: '1200+ eps', genre: 'Aventura · Infantil', rating: '7.5', synopsis: 'Ash Ketchum viaja pelo mundo Pokémon com seu parceiro Pikachu, buscando se tornar o maior mestre Pokémon de todos os tempos.' },
+        { id: 'shk', title: 'Shaman King', jp: 'シャーマンキング', image: 'img/mini4.2.jpg', year: 2001, episodes: '64 eps', genre: 'Ação · Sobrenatural', rating: '7.9', synopsis: 'Yoh Asakura luta no Torneio dos Xamãs para se tornar o Shaman King e governar o mundo espiritual ao lado do samurai Amidamaru.' },
+        { id: 'gin', title: 'Gintama', jp: '銀魂', image: 'img/mini5.2.jpg', year: 2006, episodes: '367 eps', genre: 'Comédia · Ação', rating: '8.9', synopsis: 'Em um Edo alternativo invadido por alienígenas, o samurai preguiçoso Gintoki faz trabalhos aleatórios para pagar o aluguel.' },
+        { id: 'avt', title: 'Avatar: A Lenda de Aang', jp: 'アバター 伝説の少年アン', image: 'img/mini6.2.jpg', year: 2005, episodes: '61 eps', genre: 'Aventura · Fantasia', rating: '9.3', synopsis: 'Aang, o último Avatar, desperta após 100 anos de hibernação para salvar o mundo da Nação do Fogo e restaurar a harmonia.' },
+        { id: 'fma', title: 'Fullmetal Alchemist', jp: '鋼の錬金術師', image: 'img/mini7.2.jpg', year: 2003, episodes: '51 eps', genre: 'Ação · Fantasia', rating: '9.1', synopsis: 'Os irmãos Elric buscam a Pedra Filosofal para recuperar seus corpos após uma transmutação alquímica catastrófica.' },
+        { id: 'dgm', title: 'Digimon Adventure', jp: 'デジモンアドベンチャー', image: 'img/mini8.2.jpg', year: 1999, episodes: '54 eps', genre: 'Aventura · Fantasia', rating: '8.0', synopsis: 'Sete crianças são transportadas para o Mundo Digital, onde descobrem seus Digimon parceiros e uma missão para salvar dois mundos.' },
+        { id: 'mha', title: 'My Hero Academia', jp: '僕のヒーローアカデミア', image: 'img/mini9.2.jpg', year: 2016, episodes: '138+ eps', genre: 'Ação · Super-heróis', rating: '8.3', synopsis: 'Izuku Midoriya nasce sem Quirk em um mundo cheio de super-humanos, mas recebe o poder do maior herói para suceder seu legado.' }
     ],
 
     populares: [
-        { id: 'dif', title: 'Darling in the Franxx', jp: 'ダーリン・イン・ザ・フランキス', image: 'img/mini0.jpg', year: 2018, episodes: '24 eps', genre: 'Ficção · Romance', rating: '7.4', synopsis: 'Em um futuro distópico, jovens pilotos duplos controlam mechs chamados Franxx para defender a humanidade de kaijus.' },
-        { id: 'se', title: 'Soul Eater', jp: 'ソウルイーター', image: 'img/mini1.jpg', year: 2008, episodes: '51 eps', genre: 'Ação · Sobrenatural', rating: '8.0', synopsis: 'Estudantes da Academia Shibusen treinam como empunhadores de armas vivas para colher almas malignas.' },
-        { id: 'hotd', title: 'Highschool of the Dead', jp: '学園黙示録', image: 'img/mini2.jpg', year: 2010, episodes: '12 eps', genre: 'Ação · Terror', rating: '7.2', synopsis: 'Um grupo de estudantes luta pela sobrevivência após um apocalipse zumbi devastar o Japão.' },
-        { id: 'nnt', title: 'Nanatsu no Taizai', jp: '七つの大罪', image: 'img/mini3.jpg', year: 2014, episodes: '100+ eps', genre: 'Ação · Fantasia', rating: '8.1', synopsis: 'A princesa Elizabeth busca os Sete Pecados Capitais, lendários cavaleiros, para salvar seu reino dos Cavaleiros Sagrados.' },
-        { id: 'sao', title: 'Sword Art Online', jp: 'ソードアート・オンライン', image: 'img/mini4.jpg', year: 2012, episodes: '96+ eps', genre: 'Ficção · Aventura', rating: '7.5', synopsis: 'Kirito fica preso em um MMORPG de realidade virtual onde morrer no jogo significa morrer na vida real.' },
-        { id: 'tnyn', title: 'Tate no Yuusha', jp: '盾の勇者の成り上がり', image: 'img/mini5.jpg', year: 2019, episodes: '50+ eps', genre: 'Fantasia · Aventura', rating: '7.9', synopsis: 'Naofumi é convocado como o Herói do Escudo em outro mundo e, traído por todos, precisa se tornar forte por conta própria.' },
-        { id: 'opm', title: 'One Punch Man', jp: 'ワンパンマン', image: 'img/mini6.jpg', year: 2015, episodes: '24 eps', genre: 'Ação · Comédia', rating: '8.7', synopsis: 'Saitama é um herói tão poderoso que derrota qualquer oponente com um único soco — e isso entediantemente o deprime.' },
-        { id: 'hxh', title: 'Hunter × Hunter', jp: 'ハンター×ハンター', image: 'img/mini7.jpg', year: 2011, episodes: '148 eps', genre: 'Ação · Aventura', rating: '9.1', synopsis: 'Gon Freecss embarca na jornada para se tornar um Hunter e encontrar seu pai desaparecido.' },
-        { id: 'iny', title: 'Inuyasha', jp: '犬夜叉', image: 'img/mini8.jpg', year: 2000, episodes: '193 eps', genre: 'Fantasia · Romance', rating: '7.9', synopsis: 'Kagome viaja no tempo para o Japão feudal, onde se une ao meio-demônio Inuyasha para recuperar a Joia de Quatro Almas.' },
-        { id: 'cdz', title: 'Cavaleiros do Zodíaco', jp: '聖闘士星矢', image: 'img/mini9.jpg', year: 1986, episodes: '114 eps', genre: 'Ação · Fantasia', rating: '8.0', synopsis: 'Cinco jovens guerreiros vestem as armaduras sagradas do Zodíaco para proteger a deusa Atena e a Terra.' }
+        { id: 'nar', title: 'Naruto', jp: 'ナルト', image: 'img/mini0.jpg', year: 2002, episodes: '220 eps', genre: 'Ação · Aventura', rating: '8.4', synopsis: 'Naruto Uzumaki, um jovem ninja rejeitado pela vila, busca reconhecimento e sonha em se tornar Hokage, o líder mais forte da Vila da Folha.' },
+        { id: 'op', title: 'One Piece', jp: 'ワンピース', image: 'img/mini1.jpg', year: 1999, episodes: '1100+ eps', genre: 'Ação · Aventura', rating: '9.1', synopsis: 'Monkey D. Luffy zarpa em busca do maior tesouro do mundo, o One Piece, reunindo uma tripulação de piratas com sonhos impossíveis.' },
+        { id: 'nsh', title: 'Naruto Shippuden', jp: 'ナルト 疾風伝', image: 'img/mini2.jpg', year: 2007, episodes: '500 eps', genre: 'Ação · Aventura', rating: '8.7', synopsis: 'Após treinar por dois anos e meio, Naruto retorna para enfrentar a organização Akatsuki e proteger seus amigos.' },
+        { id: 'jjk', title: 'Jujutsu Kaisen', jp: '呪術廻戦', image: 'img/mini3.jpg', year: 2020, episodes: '47+ eps', genre: 'Ação · Sobrenatural', rating: '8.7', synopsis: 'Yuji Itadori engole um artefato amaldiçoado e se torna hospedeiro de uma entidade lendária. Agora ele treina como feiticeiro Jujutsu.' },
+        { id: 'dbz', title: 'Dragon Ball Z', jp: 'ドラゴンボールZ', image: 'img/mini4.jpg', year: 1989, episodes: '291 eps', genre: 'Ação · Aventura', rating: '8.8', synopsis: 'Goku e seus amigos enfrentam inimigos intergalácticos em batalhas épicas para proteger a Terra e o universo inteiro.' },
+        { id: 'dbs', title: 'Dragon Ball Super', jp: 'ドラゴンボール超', image: 'img/mini5.jpg', year: 2015, episodes: '131 eps', genre: 'Ação · Aventura', rating: '8.2', synopsis: 'Goku e Vegeta enfrentam ameaças de outros universos, dos Deuses da Destruição a um torneio multiversal.' },
+        { id: 'ble', title: 'Bleach', jp: 'ブリーチ', image: 'img/mini6.jpg', year: 2004, episodes: '366 eps', genre: 'Ação · Sobrenatural', rating: '8.6', synopsis: 'Ichigo Kurosaki, adolescente que vê fantasmas, ganha os poderes de um Shinigami e passa a proteger os vivos dos Hollows.' },
+        { id: 'kny', title: 'Kimetsu no Yaiba', jp: '鬼滅の刃', image: 'img/mini7.jpg', year: 2019, episodes: '55+ eps', genre: 'Ação · Sobrenatural', rating: '9.0', synopsis: 'Tanjiro Kamado se torna caçador de demônios para salvar sua irmã, transformada em demônio após um ataque brutal.' },
+        { id: 'aot', title: 'Ataque dos Titãs', jp: '進撃の巨人', image: 'img/mini8.jpg', year: 2013, episodes: '87 eps', genre: 'Ação · Drama', rating: '9.4', synopsis: 'Eren Yeager jura exterminar os titãs após a queda da muralha. Mas a verdade por trás deles é mais sombria do que parece.' },
+        { id: 'dn', title: 'Death Note', jp: 'デスノート', image: 'img/mini9.jpg', year: 2006, episodes: '37 eps', genre: 'Suspense · Psicológico', rating: '9.0', synopsis: 'Light Yagami usa um caderno sobrenatural para matar criminosos. L, o maior detetive do mundo, investiga o caso.' }
     ],
 
     recomendados: [
